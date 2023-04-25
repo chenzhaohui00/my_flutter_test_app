@@ -8,12 +8,12 @@ import 'container_widget/container_widget_route.dart';
 import 'layout_widget/layout_widget_route.dart';
 
 void main() {
-  var onError = FlutterError.onError;
+var onError = FlutterError.onError;
   FlutterError.onError = (FlutterErrorDetails details) {
     onError?.call(details);
     debugPrint(details.exceptionAsString());
   };
-  runZoned(() => runApp(const MyApp()),
+    /*runZoned(() => runApp(const MyApp()),
       zoneSpecification: ZoneSpecification(
           print: (Zone self, ZoneDelegate parent, Zone zone, String line) {
             debugPrint("zoneLog:$line");
@@ -23,7 +23,8 @@ void main() {
             // var logger = Logger();
             // logger.e('${error.toString()} $stackTrace');
             debugPrint('${error.toString()} $stackTrace');
-          }));
+          }));*/
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
