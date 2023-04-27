@@ -1,11 +1,10 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:my_app/widget_state_manage.dart';
 
 import 'basic_widget/basic_widget_route.dart';
 import 'container_widget/container_widget_route.dart';
 import 'layout_widget/layout_widget_route.dart';
+import 'scrollable_widget/scrollable_widget_route.dart';
 
 void main() {
 var onError = FlutterError.onError;
@@ -149,6 +148,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text("ContainerWidgetRoute")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ScrollableWidgetRoute();
+                  }));
+                },
+                child: const Text("ScrollableWidgetRoute")),
           ],
         ),
       ),
