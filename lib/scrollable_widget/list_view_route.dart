@@ -23,6 +23,7 @@ class ListViewRoute extends StatelessWidget {
   Widget normalBuilder() {
     return ListView.builder(
         itemExtent: 50,
+        itemCount: 100,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
