@@ -67,6 +67,7 @@ flutter:
     - images/send_icon.png
     - images/thumb_up_icon.png
     - images/hacker_avatar.png
+    - images/sea.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

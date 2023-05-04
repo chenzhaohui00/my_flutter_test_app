@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'custom_scroll_view_and_sliver_route.dart';
+import 'nested_scroll_view_route.dart';
 import 'tab_bar_view_route.dart';
 import 'animated_list_route.dart';
 import 'grid_view_route.dart';
@@ -67,6 +68,12 @@ class ScrollableWidgetRoute extends StatelessWidget {
                     return const CustomScrollViewAndSliverRoute();
                   }));
                 }, child: const Text('CustomScrollViewAndSliverRoute'),
+              ),TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const NestedScrollViewRoute();
+                  }));
+                }, child: const Text('NestedScrollViewRoute'),
               ),
             ],
           ),
