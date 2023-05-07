@@ -3,6 +3,7 @@ import 'package:my_app/widget_state_manage.dart';
 
 import 'basic_widget/basic_widget_route.dart';
 import 'container_widget/container_widget_route.dart';
+import 'functional_widget/functional_widget_router.dart';
 import 'layout_widget/layout_widget_route.dart';
 import 'scrollable_widget/scrollable_widget_route.dart';
 
@@ -155,6 +156,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text("ScrollableWidgetRoute")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const FunctionalWidgetRouter();
+                  }));
+                },
+                child: const Text("FunctionalWidgetRouter")),
           ],
         ),
       ),
