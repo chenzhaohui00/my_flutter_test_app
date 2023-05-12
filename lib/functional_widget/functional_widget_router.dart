@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dialog_route.dart';
+import 'future_builder_stream_builder.dart';
 import 'inherited_widget_route.dart';
 import 'my_provider_route.dart';
 import 'theme_and_color_route.dart';
+import 'value_listenable_builder_route.dart';
 import 'will_pop_scope_route.dart';
 
 class FunctionalWidgetRouter extends StatelessWidget {
@@ -15,6 +18,7 @@ class FunctionalWidgetRouter extends StatelessWidget {
         ),
         body: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
                     onPressed: () {
@@ -44,6 +48,27 @@ class FunctionalWidgetRouter extends StatelessWidget {
                       }));
                     },
                     child: const Text('ThemeAndColorRoute')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return ValueListenableBuilderRoute();
+                      }));
+                    },
+                    child: const Text('ValueListenableBuilderRoute')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const FutureBuilderAndStreamBuilderRoute();
+                      }));
+                    },
+                    child: const Text('FutureBuilderAndStreamBuilderRoute')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const DialogSampleRoute();
+                      }));
+                    },
+                    child: const Text('DialogSampleRoute')),
               ],
             )
         )
