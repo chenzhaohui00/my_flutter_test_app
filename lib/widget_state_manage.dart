@@ -12,12 +12,12 @@ class WidgetStateManageSampleRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text("WidgetStateManageSampleRoute"),
       ),
-      body: Column(children: const [
-        RandomWordsWidget(),
-        TapboxA(),
-      ],)
+      // body: Column(children: const [
+      //   RandomWordsWidget(),
+      //   TapboxA(),
+      // ],)
       // body: TapboxBParent(),
-      // body: ParentWidgetC(),
+      body: ParentWidgetC(),
     );
   }
 

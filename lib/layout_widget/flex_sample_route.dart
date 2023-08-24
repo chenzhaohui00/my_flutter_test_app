@@ -21,17 +21,22 @@ class FlexSampleRoute extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Column(
-                children: [
-                  Expanded(flex: 2, child: Container(height: 50, color: Colors.red)),
-                  const Spacer(flex: 1),
-                  Expanded(child: Container(height: 50, color: Colors.green)),
-                ],
-              ),
-            )
-          ),
+              child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                Expanded(
+                    flex: 2, child: Container(height: 50, color: Colors.red)),
+                const Spacer(flex: 1),
+                DecoratedBox(
+                  decoration: const BoxDecoration(),
+                    child: Center(
+                      child: Expanded(
+                          child: Container(height: 50, color: Colors.green)),
+                    ))
+              ],
+            ),
+          )),
         ],
       ),
     );
