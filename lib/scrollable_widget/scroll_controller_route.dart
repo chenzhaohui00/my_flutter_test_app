@@ -6,8 +6,8 @@ class ScrollControllerRoute extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // return _ScrollControllerState();
-    return ScrollNotificationState();
+    return _ScrollControllerState();
+    // return ScrollNotificationState();
   }
 }
 

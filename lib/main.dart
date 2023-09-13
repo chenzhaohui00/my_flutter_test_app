@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/widget_state_manage.dart';
 
+import 'animation/animation_route.dart';
 import 'basic_widget/basic_widget_route.dart';
 import 'container_widget/container_widget_route.dart';
 import 'event/event_router.dart';
@@ -171,6 +172,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   }));
                 },
                 child: const Text("EventRoute")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const AnimationRoute();
+                  }));
+                },
+                child: const Text("AnimationRoute")),
           ],
         ),
       ),
