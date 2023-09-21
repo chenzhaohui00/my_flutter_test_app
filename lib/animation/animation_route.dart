@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'implicit_animated_container_route.dart';
+import 'custom_painter_route.dart';
+import 'explicit_animated_route.dart';
+import 'explicit_animated_route2.dart';
+import 'hero_animation.dart';
+import 'implicit_animated_route.dart';
 
 class AnimationRoute extends StatelessWidget {
   const AnimationRoute({super.key});
@@ -18,10 +22,38 @@ class AnimationRoute extends StatelessWidget {
                 TextButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return const ImplicitAnimatedContainerRoute();
+                        return const ImplicitAnimatedRoute();
                       }));
                     },
-                    child: const Text('TextSampleWidget')),
+                    child: const Text('ImplicitAnimatedWidget')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const ExplicitAnimatedRoute();
+                      }));
+                    },
+                    child: const Text('ExplicitAnimatedWidget')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const ExplicitAnimatedRoute2();
+                      }));
+                    },
+                    child: const Text('ExplicitAnimatedWidget2')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return HeroAnimationRoute();
+                      }));
+                    },
+                    child: const Text('HeroAnimationRoute')),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return CustomPainterRoute();
+                      }));
+                    },
+                    child: const Text('CustomPainterRoute')),
               ],
             )));
   }
