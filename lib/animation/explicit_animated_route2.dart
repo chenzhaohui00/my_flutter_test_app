@@ -40,8 +40,8 @@ class _ExplicitAnimatedRoute2State extends State<ExplicitAnimatedRoute2>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override

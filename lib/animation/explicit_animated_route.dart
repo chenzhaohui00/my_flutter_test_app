@@ -26,8 +26,8 @@ class _ExplicitAnimatedRouteState extends State<ExplicitAnimatedRoute>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override

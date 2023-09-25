@@ -24,8 +24,8 @@ class CustomPainterState extends State<CustomPainterRoute>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override
